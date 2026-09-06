@@ -1,98 +1,57 @@
 import React from "react";
-import Accordion from "./Accordion";
-import EmailPregunta from "./EmailPregunta";
 
-const SectionPreguntas: React.FC = () => {
-  const accordionItems = [
-    {
-      title: "¿Qué es NetWaifu?",
-      content: (
-        <p>
-          NetWaifu es un servicio de streaming que ofrece una gran variedad de
-          películas, series y documentales premiados en casi cualquier pantalla
-          conectada a internet. <br />
-          <br /> Todo lo que quieras ver, sin límites ni comerciales, a un costo
-          muy accesible. Siempre hay algo nuevo por descubrir, ¡y todas las
-          semanas se agregan más películas y series!
-        </p>
-      ),
-    },
-    {
-      title: "¿Cuánto cuesta NetWaifu?",
-      content: (
-        <p>
-          Disfruta NetWaifu en tu smartphone, tablet, smart TV, laptop o
-          dispositivo de streaming, todo por una tarifa plana mensual. Planes
-          desde S/ 24.90 hasta S/ 44.90 al mes. Sin costos adicionales ni
-          contratos.
-        </p>
-      ),
-    },
-    {
-      title: "¿Dónde puedo ver NeWaifu?",
-      content: (
-        <p>
-          Disfruta donde quieras, cuando quieras. Inicia sesión en tu cuenta de
-          NetWaifu para ver contenido al instante a través de netwaifu.com desde
-          tu computadora personal o en cualquier dispositivo con conexión a
-          internet que cuente con la app de NetWaifu, como smart TV,
-          smartphones, tablets, reproductores multimedia y consolas de juegos.{" "}
-          <br />
-          <br /> Además, puedes descargar tus series favoritas con la app para
-          iOS o Android. Con la función de descarga, puedes ver contenido donde
-          vayas y sin conexión a internet. Lleva NetWaifu contigo adonde sea.
-        </p>
-      ),
-    },
-    {
-      title: "¿Cómo cancelo?",
-      content: (
-        <p>
-          NetWaifu es flexible. Sin contratos molestos ni compromisos. Cancela
-          la membresía online con solo dos clics. No hay cargos por cancelación.
-          Empieza y termina cuando quieras.
-        </p>
-      ),
-    },
-    {
-      title: "¿Qué puedo ver en NetWaifu?",
-      content: (
-        <p>
-          NetWaifu tiene un amplio catálogo de películas, series, documentales,
-          animes, originales premiados y más. Todo lo que quieras ver, cuando
-          quieras.
-        </p>
-      ),
-    },
-    {
-      title: "¿Es bueno NetWaifu para los niños?",
-      content: (
-        <p>
-          La experiencia de Netflix para niños está incluida en la membresía
-          para que los padres tengan el control mientras los peques disfrutan
-          series y películas familiares en su propio espacio. <br />
-          <br /> Los perfiles para niños incluyen controles parentales
-          protegidos por PIN que te permiten restringir el contenido que pueden
-          ver los niños en función de la clasificación por edad y bloquear
-          determinados títulos que no quieras que los niños vean.
-        </p>
-      ),
-    },
-  ];
+const VIDEO_URL = "https://www.youtube.com/watch?v=NJDVVdiGYqQ";
 
+export default function SectionPreguntas() {
   return (
-    <div className="bg-black flex mt-2 p-24 place-content-center w-full">
-      <div className="p-8 text-center">
-        <h1 className="text-5xl max-md:text-2xl text-white font-bold mb-6">
-          Preguntas Frecuentes
-        </h1>
-        <div className="flex">
-          <Accordion items={accordionItems} />
-        </div>
-        <EmailPregunta />
-      </div>
-    </div>
-  );
-};
+    <section className="bg-netflix-dark py-16 sm:py-20 md:py-24">
+      <div className="netflix-container max-w-4xl">
+        <h2 className="mb-8 text-center text-3xl font-bold sm:text-4xl md:text-5xl">
+          La historia de este opening
+        </h2>
 
-export default SectionPreguntas;
+        <div className="space-y-6 text-lg leading-relaxed text-netflix-gray-light sm:text-xl">
+          <p>
+            <strong className="text-white">Todo empezó con la Beca Generación Digital Perú.</strong>{" "}
+            Una iniciativa del Ministerio de Trabajo (MTPE), el Banco
+            Interamericano de Desarrollo (BID) y la Asociación Es Hoy. Egg
+            Cooperation fue la institución que dictó los cursos y emitió las
+            certificaciones.
+          </p>
+          <p>
+            <strong className="text-white">De pocos comenzamos, un sueño formamos.</strong>{" "}
+            No éramos muchos al principio, pero teníamos algo en común: la
+            pasión por el código y ganas de crecer. Con esfuerzo, juntos
+            avanzamos. Cada error fue una lección, cada compilación una victoria.
+          </p>
+          <p>
+            <strong className="text-white">El opening como recuerdo.</strong>{" "}
+            Para celebrar lo que habíamos construido, creamos este opening con
+            IA (SUNO). Es nuestra forma de recordar que, aunque a veces el
+            código no compila, lo importante es seguir intentando.
+          </p>
+          <p>
+            <strong className="text-white">Una comunidad que sigue viva.</strong>{" "}
+            "A Veces Codeamos" no es solo un nombre, es la muestra de que
+            cuando personas con el mismo objetivo se juntan, pueden crear algo
+            especial. Y este opening es parte de ese recuerdo.
+          </p>
+        </div>
+
+        <div className="mt-10 text-center">
+          <a
+            href={VIDEO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="netflix-btn inline-flex items-center gap-2 rounded-sm"
+          >
+            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+            Escuchar el opening
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}

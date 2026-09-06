@@ -1,20 +1,44 @@
 import React from "react";
 
+const VIDEO_ID = "NJDVVdiGYqQ";
+const CHANNEL_URL = "https://www.youtube.com/@RuisuTech";
+
 export default function HeroBar() {
   return (
-    <div className="flex flex-col text-center gap-4 text-white mt-[270px] max-md:mt-[50px] p-4">
-      <h1 className="text-5xl max-md:text-2xl font-bold ">Películas y series ilimitadas y mucho más</h1>
-      <h2 className="text-2xl max-md:text-xl">Disfruta donde quieras. Cancela cuando quieras.</h2>
-      <div>
-        <h2 className="text-2xl max-md:text-lg">
-          ¿Quieres ver NetWaifu ya? Ingresa tu email para crear una cuenta o
-          reiniciar tu membresía de NetWaifu.
-        </h2>
-        <div className="flex justify-center gap-4 mt-4 mb-60">
-          <input className="bg-slate-950/50 border-2 border-slate-700 text-slate rounded p-2 w-1/6 max-md:w-1/2" type="email" name="emails" id="email" placeholder="Email" />
-          <button className="bg-red-500 border-2 border-red-500 text-white rounded p-1 pb-2  text-2xl">Comenzar </button>
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-netflix-dark">
+      <div className="relative z-10 mx-auto w-full max-w-5xl px-4 text-center animate-fade-in">
+        <p className="mb-4 text-sm uppercase tracking-widest text-netflix-gray sm:text-base">
+          Beca Generación Digital Perú &middot; Comunidad "A Veces Codeamos"
+        </p>
+        <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+          A veces codeamos
+        </h1>
+        <p className="mb-8 text-lg text-netflix-gray-light sm:text-xl">
+          El opening de nuestra comunidad, creado como recuerdo de este viaje.
+        </p>
+
+        <div className="mx-auto mb-8 aspect-video w-full max-w-3xl overflow-hidden rounded-lg shadow-2xl shadow-black/50">
+          <iframe
+            className="h-full w-full"
+            src={`https://www.youtube.com/embed/${VIDEO_ID}`}
+            title="A veces codeamos - Opening"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
+
+        <a
+          href={CHANNEL_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="netflix-btn-lg inline-flex items-center gap-2 rounded-sm"
+        >
+          <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          </svg>
+          Suscribirse al canal
+        </a>
       </div>
-    </div>
+    </section>
   );
 }

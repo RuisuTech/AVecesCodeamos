@@ -1,16 +1,22 @@
 import React from "react";
 
+const CHANNEL_URL = "https://www.youtube.com/@RuisuTech";
+
 export default function NavBar() {
   return (
-    <div className="flex place-content-around items-center p-8">
-      <img className="h-12 max-md:h-6" src="./../NetWaifu-Logo.png" alt="Logo" />
-      <div className="flex gap-4">
-        <select className="bg-transparent border-2 border-white-950  text-white" name="Idioma" id="Idioma">
-          <option value="Español">Español</option>
-          <option value="Ingles">Ingles</option>
-        </select>
-        <a className="bg-red-500 border-2 border-red-500 text-white rounded p-2" href="#">Iniciar sesión</a>
-      </div>
-    </div>
+    <header className="absolute top-0 left-0 z-50 flex w-full items-center justify-between px-6 py-5 sm:px-12 md:px-16 lg:px-20">
+      <a href="/" className="relative z-10 text-xl font-bold tracking-tight text-white sm:text-2xl">
+        A Veces Codeamos
+      </a>
+
+      <a
+        href={CHANNEL_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="netflix-btn rounded-sm text-sm font-medium"
+      >
+        Ver en YouTube
+      </a>
+    </header>
   );
 }

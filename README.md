@@ -1,13 +1,16 @@
-# NetWaifu
+# A Veces Codeamos
 
-Página de aterrizaje tipo Netflix construida con React y Tailwind CSS. Proyecto de práctica para mejorar el uso de utilidades de estilos con Tailwind.
+Sitio web de la comunidad "A Veces Codeamos", nacida de la Beca Generación Digital Perú. Espacio para compartir el opening y contenido del canal RuisuTech.
+
+## Contexto
+
+La Beca Generación Digital Perú es una iniciativa del Ministerio de Trabajo (MTPE), el Banco Interamericano de Desarrollo (BID) y la Asociación Es Hoy. Egg Cooperation fue la institución que dictó los cursos y emitió las certificaciones. De esa beca surgió la comunidad "A Veces Codeamos".
 
 ## Tecnologías
 
 - **React 18** con JSX y componentes funcionales
 - **Vite** como bundler y dev server
 - **Tailwind CSS 3** para estilos
-- **TypeScript** en componentes (.tsx)
 - **ESLint** para linting
 
 ## Estructura del proyecto
@@ -15,17 +18,12 @@ Página de aterrizaje tipo Netflix construida con React y Tailwind CSS. Proyecto
 ```
 src/
 ├── components/
-│   ├── NavBar.tsx          # Barra de navegación con logo e iniciar sesión
-│   ├── HeroBar.tsx         # Sección hero con formulario de email
-│   ├── Section.tsx         # Feature: "Disfruta en tu TV"
-│   ├── Section2.tsx        # Feature: "Descarga para ver offline"
-│   ├── Section3.tsx        # Feature: "Disfruta donde quieras"
-│   ├── Section4.tsx        # Feature: "Crea varios perfiles"
-│   ├── SectionPreguntas.tsx # Sección de preguntas frecuentes (FAQ)
-│   ├── Accordion.tsx       # Componente acordeón reutilizable
-│   ├── EmailPregunta.tsx   # CTA de email al final del FAQ
-│   └── Footer.tsx          # Pie de página con enlaces
-├── App.jsx                 # Componente raíz
+│   ├── NavBar.tsx          # Barra de navegación con logo y enlace al canal
+│   ├── HeroBar.tsx         # Sección principal con video de YouTube
+│   ├── About.tsx           # Información sobre la comunidad
+│   ├── SectionPreguntas.tsx # Historia del opening
+│   └── Footer.tsx          # Pie de página
+├── App.tsx                 # Componente raíz
 ├── main.jsx                # Punto de entrada
 └── index.css               # Estilos base de Tailwind
 ```
@@ -45,3 +43,8 @@ npm run dev
 | `npm run build` | Generar build de producción |
 | `npm run preview` | Previsualizar build de producción |
 | `npm run lint` | Ejecutar ESLint |
+
+## Enlaces
+
+- [Canal de YouTube](https://www.youtube.com/@RuisuTech)
+- [Opening "A veces codeamos"](https://www.youtube.com/watch?v=NJDVVdiGYqQ)
