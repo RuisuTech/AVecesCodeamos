@@ -6,7 +6,7 @@ import Footer from "./components/Footer.tsx";
 
 function App() {
   return (
-    <div className="min-h-screen bg-netflix-dark">
+    <div className="min-h-screen bg-ocean-dark">
       <NavBar />
       <HeroBar />
       <About />
